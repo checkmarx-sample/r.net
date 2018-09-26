@@ -27,11 +27,11 @@ namespace DataAccess
                 connection.Open();
 
                 //-------Finding
-                //SqlCeCommand query = new SqlCeCommand("SELECT * FROM [location] where atm = 'Yes' and zip = '" + zip + "'", connection);
+                SqlCeCommand query = new SqlCeCommand("SELECT * FROM [location] where atm = 'Yes' and zip = '" + zip + "'", connection);
 
                 //------Solution--------------------------------------------------------------------------------------------------------------------------------
-                                SqlCeCommand query = new SqlCeCommand("SELECT * FROM [location] where atm = 'Yes' and zip = @postalcode", connection);//
-                                query.Parameters.AddWithValue("@postalcode", zip);
+                //                SqlCeCommand query = new SqlCeCommand("SELECT * FROM [location] where atm = 'Yes' and zip = @postalcode", connection);//
+                //                query.Parameters.AddWithValue("@postalcode", zip);
                 //--------------------------------------------------------------------------------------------------------------------------------------
 
 
